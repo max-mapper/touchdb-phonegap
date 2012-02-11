@@ -1,0 +1,1 @@
+this doesn't work yet due to an unknown Objective-C error! if you you would like to try your hand at debugging it please see [this issue](https://github.com/maxogden/touchdb-phonegap/issues/1)
