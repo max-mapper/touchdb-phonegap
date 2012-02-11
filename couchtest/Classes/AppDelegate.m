@@ -27,6 +27,8 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import <CouchCocoa/CouchCocoa.h>
+#import <CouchCocoa/CouchTouchDBServer.h>
 
 #ifdef PHONEGAP_FRAMEWORK
     #import <PhoneGap/PGPlugin.h>
@@ -60,7 +62,20 @@
  * This is main kick off after the app inits, the views and Settings are setup here. (preferred - iOS4 and up)
  */
 - (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
-{    
+{   
+    CouchTouchDBServer* server = [CouchTouchDBServer sharedInstance];
+    if (server.error) {
+        NSLog(@"TouchDB fail %@",server.error);
+        exit(-1);
+    }
+    CouchDatabase *database = [server databaseNamed: @"default"];
+    NSError* error;
+    if (![database ensureCreated: &error]) {
+        NSLog(@"TouchDB fail %@",error);
+        exit(-1);
+    }
+    NSLog(@"TouchDB start %@",database.URL);
+     
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
     if (url && [url isKindOfClass:[NSURL class]]) {
         self.invokeString = [url absoluteString];

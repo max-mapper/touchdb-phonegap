@@ -35,7 +35,10 @@
 		58CD48B014E5F8A90086828E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CD48AF14E5F8A90086828E /* MainViewController.m */; };
 		58CD48B214E5F8A90086828E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58CD48B114E5F8A90086828E /* MainViewController.xib */; };
 		58CD48BB14E5F8BF0086828E /* PhoneGap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CD48BA14E5F8BF0086828E /* PhoneGap.framework */; };
-		58CD48BD14E5F8FB0086828E /* www in Resources */ = {isa = PBXBuildFile; fileRef = 58CD48BC14E5F8FB0086828E /* www */; };
+		58CD48C014E5FA7A0086828E /* CouchCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CD48BE14E5FA7A0086828E /* CouchCocoa.framework */; };
+		58CD48C714E5FB0C0086828E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CD48C614E5FB0C0086828E /* libsqlite3.dylib */; };
+		58CD48C914E5FBFC0086828E /* www in Resources */ = {isa = PBXBuildFile; fileRef = 58CD48C814E5FBFC0086828E /* www */; };
+		58CD48D714E6037B0086828E /* TouchDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CD48D614E6037B0086828E /* TouchDB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +76,10 @@
 		58CD48B114E5F8A90086828E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
 		58CD48B414E5F8A90086828E /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		58CD48BA14E5F8BF0086828E /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PhoneGap.framework; sourceTree = "<group>"; };
-		58CD48BC14E5F8FB0086828E /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = Resources/www; sourceTree = "<group>"; };
+		58CD48BE14E5FA7A0086828E /* CouchCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchCocoa.framework; sourceTree = "<group>"; };
+		58CD48C614E5FB0C0086828E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		58CD48C814E5FBFC0086828E /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		58CD48D614E6037B0086828E /* TouchDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TouchDB.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58CD48C714E5FB0C0086828E /* libsqlite3.dylib in Frameworks */,
 				58CD486D14E5F8A80086828E /* Foundation.framework in Frameworks */,
 				58CD486F14E5F8A80086828E /* UIKit.framework in Frameworks */,
 				58CD487114E5F8A80086828E /* CoreGraphics.framework in Frameworks */,
@@ -95,6 +102,8 @@
 				58CD488314E5F8A80086828E /* MobileCoreServices.framework in Frameworks */,
 				58CD488514E5F8A80086828E /* CoreMedia.framework in Frameworks */,
 				58CD48BB14E5F8BF0086828E /* PhoneGap.framework in Frameworks */,
+				58CD48C014E5FA7A0086828E /* CouchCocoa.framework in Frameworks */,
+				58CD48D714E6037B0086828E /* TouchDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +120,8 @@
 		58CD485A14E5F8A80086828E = {
 			isa = PBXGroup;
 			children = (
+				58CD48C814E5FBFC0086828E /* www */,
+				58CD48C614E5FB0C0086828E /* libsqlite3.dylib */,
 				58CD488614E5F8A80086828E /* couchtest */,
 				58CD486B14E5F8A80086828E /* Frameworks */,
 				58CD486914E5F8A80086828E /* Products */,
@@ -172,8 +183,9 @@
 		58CD489114E5F8A80086828E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				58CD48BC14E5F8FB0086828E /* www */,
+				58CD48D614E6037B0086828E /* TouchDB.framework */,
 				58CD48BA14E5F8BF0086828E /* PhoneGap.framework */,
+				58CD48BE14E5FA7A0086828E /* CouchCocoa.framework */,
 				58CD48A614E5F8A90086828E /* Capture.bundle */,
 				58CD489214E5F8A80086828E /* en.lproj */,
 				58CD489614E5F8A80086828E /* es.lproj */,
@@ -302,7 +314,7 @@
 				58CD48A714E5F8A90086828E /* Capture.bundle in Resources */,
 				58CD48A914E5F8A90086828E /* PhoneGap.plist in Resources */,
 				58CD48B214E5F8A90086828E /* MainViewController.xib in Resources */,
-				58CD48BD14E5F8FB0086828E /* www in Resources */,
+				58CD48C914E5FBFC0086828E /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +434,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/Shared/PhoneGap/Frameworks,
 					"\"$(SRCROOT)/couchtest\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TouchDB-cizuzqumsvrnkwbxyrglnmnnjxmw/Build/Products/Debug-ios-universal\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -453,6 +466,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/Shared/PhoneGap/Frameworks,
 					"\"$(SRCROOT)/couchtest\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TouchDB-cizuzqumsvrnkwbxyrglnmnnjxmw/Build/Products/Debug-ios-universal\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "couchtest/couchtest-Prefix.pch";
